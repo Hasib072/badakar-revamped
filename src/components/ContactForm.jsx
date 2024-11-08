@@ -16,6 +16,25 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...formData }),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div>
       {submitted ? (
@@ -26,20 +45,11 @@ const ContactForm = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={(e) => {
-            e.preventDefault();
-            // Optionally handle client-side validation here
-            fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(formData).toString(),
-            })
-              .then(() => setSubmitted(true))
-              .catch((error) => alert(error));
-          }}
+          onSubmit={handleSubmit}
         >
           {/* Hidden input for Netlify Forms */}
           <input type="hidden" name="form-name" value="contact" />
+          {/* Honeypot Field */}
           <p hidden>
             <label>
               Don’t fill this out: <input name="bot-field" onChange={handleChange} />

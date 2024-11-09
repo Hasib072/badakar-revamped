@@ -1,11 +1,16 @@
 // src/components/ExpertiseSection.jsx
 import React, { useEffect } from 'react';
-import interiorFitouts from '../assets/interior-fitouts.jpg';
-import securitySurveillance from '../assets/security-surveillance.jpg';
-import mepServices from '../assets/mep-services.jpg';
-import commercialCeilings from '../assets/commercial-ceilings.jpg';
-import homeAutomation from '../assets/home-automation.jpg';
-import fireProtection from '../assets/fire-protection.jpg';
+import img01 from '../assets/commercial-ceilings.jpg';
+import interiorFitouts from '../assets/oQlJhzBFam.jpg';
+import securitySurveillance from '../assets/security.jpg';
+import mepServices from '../assets/services-to-MEP-engineers.jpg';
+import commercialCeilings from '../assets/bespoke-feature-lighting-2.jpg';
+import homeAutomation from '../assets/smart-home.jpg';
+import fireProtection from '../assets/nice-enterprise-gandhigram-rajkot-safety-equipment-dealers-g78em1aesj.jpg';
+import electrical from '../assets/electrical.jpg'
+import renovation from '../assets/old-house-living-room-renovation.jpg'
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -20,27 +25,27 @@ const ExpertiseSection = () => {
   const expertiseData = [
     {
       title: 'Fresh Commercial & Residential Interiors',
-      image: interiorFitouts,
+      image: img01,
     },
     {
       title: 'Renovation / Restructure / Remodelling',
-      image: securitySurveillance,
+      image: renovation,
     },
     {
       title: 'Electronics / Electricals',
-      image: mepServices,
+      image: electrical,
     },
     {
       title: 'Interior Fitouts',
-      image: commercialCeilings,
+      image: interiorFitouts,
     },
     {
       title: 'Complete MEP Services',
-      image: homeAutomation,
+      image: mepServices,
     },
     {
       title: 'Home Automation',
-      image: fireProtection,
+      image: homeAutomation,
     },
     {
       title: 'Security Surveillance',
@@ -52,7 +57,7 @@ const ExpertiseSection = () => {
     },
     {
       title: 'Let`s Talk',
-      image: fireProtection,
+      image: img01,
     },
   ];
 
@@ -87,16 +92,16 @@ const ExpertiseSection = () => {
               <img
                 src={expertise.image}
                 alt={expertise.title}
-                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110 filter grayscale group-hover:grayscale-0 transition-filter duration-300 ease-in-out"
               />
             </div>
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-25"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-60 transition-opacity duration-300 group-hover:bg-opacity-25"></div>
 
             {/* Expertise Title */}
-            <div className="absolute bottom-0 left-0 w-full text-center px-4 py-2">
-              <h4 className="text-white text-lg font-inter font-semibold transition-opacity duration-300 group-hover:opacity-90">
+            <div className="absolute bottom-0 left-0 w-full px-4 py-2">
+              <h4 className="text-white text-[1.5rem] font-inter font-bold transition-opacity duration-300 group-hover:opacity-90">
                 {expertise.title}
               </h4>
             </div>

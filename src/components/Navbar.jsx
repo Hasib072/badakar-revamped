@@ -15,12 +15,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 fixed w-full z-10 top-0">
+    <nav className="bg-white fixed w-full z-10 top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-white text-xl font-bold" onClick={closeMobileMenu}>
+            <NavLink to="/" className="text-black text-xl font-bold" onClick={closeMobileMenu}>
               MyLogo
             </NavLink>
           </div>
@@ -30,15 +30,15 @@ const Navbar = () => {
             <ul className="flex space-x-4">
               <li>
                 <NavLink
-                  to="/"
+                  to="/about"
                   className={({ isActive }) =>
                     isActive
                       ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
                   }
                   onClick={closeMobileMenu}
                 >
-                  Home
+                  ABOUT
                 </NavLink>
               </li>
               <li>
@@ -47,11 +47,11 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
                   }
                   onClick={closeMobileMenu}
                 >
-                  About
+                  INTIGRATED SOLUTIONS
                 </NavLink>
               </li>
               <li>
@@ -60,11 +60,37 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
                   }
                   onClick={closeMobileMenu}
                 >
-                  Services
+                  SERVICES
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  PROJECT
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  CAREEAR
                 </NavLink>
               </li>
               <li>
@@ -73,11 +99,11 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
                   }
                   onClick={closeMobileMenu}
                 >
-                  Contact
+                  CONTACT
                 </NavLink>
               </li>
             </ul>
@@ -88,7 +114,7 @@ const Navbar = () => {
             <button
               onClick={handleToggle}
               type="button"
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+              className="text-gray-300 hover:text-black focus:outline-none focus:text-black"
               aria-label="Toggle menu"
               aria-expanded={isMobile}
               aria-controls="mobile-menu"
@@ -109,7 +135,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
                 }
                 onClick={closeMobileMenu}
               >
@@ -122,7 +148,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
                 }
                 onClick={closeMobileMenu}
               >
@@ -135,7 +161,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
                 }
                 onClick={closeMobileMenu}
               >
@@ -148,7 +174,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
                 }
                 onClick={closeMobileMenu}
               >

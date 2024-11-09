@@ -53,7 +53,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="container mx-auto my-16 px-4 max-w-7xl">
+    <section className="container mx-auto my-16 px-4 max-w-7xl mt-[100px]">
       {/* Title Section */}
       <div className="text-center mb-12">
         <span className="flex justify-center items-center font-light tracking-wider mb-4">
@@ -63,9 +63,8 @@ const ExpertiseSection = () => {
           data-aos="zoom-in"
           className="text-3xl md:text-4xl font-bold font-inter mb-4"
         >
-          <strong>PASSION INTO</strong>
-          <br />
-          <strong>INTERIOR SERVICES.</strong>
+          <p>PASSION INTO</p>
+          <p>INTERIOR SERVICES.</p>
         </h3>
         <p className="mt-4 font-inter text-lg text-gray-700">
           The elegance meets efficiency in professional projects, transforming your spaces with our expertise.

@@ -4,16 +4,18 @@ import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/BadakarLogoFull.png';
 import AOS from 'aos';
-
+import 'aos/dist/aos.css';
 
 const Navbar = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once - while scrolling down
+      once: true, // Whether animation should happen only once while scrolling down
     });
   }, []);
+
   const [isMobile, setIsMobile] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
   const handleToggle = () => {
     setIsMobile(!isMobile);
@@ -23,17 +25,44 @@ const Navbar = () => {
     setIsMobile(false);
   };
 
+  useEffect(() => {
+    let timeoutId = null;
+
+    const handleScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        if (window.scrollY > 30) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
+      }, 50); 
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed w-full z-10 top-0">
+    <nav
+      className={`fixed w-full z-10 top-0 transition-opacity duration-500 ease-in-out ${
+        showNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      } bg-transparent`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <NavLink to="/" className="text-white text-xl font-bold" onClick={closeMobileMenu}>
-              <img 
-              className='h-16'
-              src={logo}
-              alt="Badakar Logo" />
+              <img
+                className="h-16"
+                src={logo}
+                alt="Badakar Logo"
+              />
             </NavLink>
           </div>
 
@@ -45,8 +74,8 @@ const Navbar = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
@@ -55,15 +84,15 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/about"
+                  to="/integrated-solutions"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
-                  INTIGRATED SOLUTIONS
+                  INTEGRATED SOLUTIONS
                 </NavLink>
               </li>
               <li>
@@ -71,8 +100,8 @@ const Navbar = () => {
                   to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
@@ -81,11 +110,11 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/services"
+                  to="/project"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
@@ -94,15 +123,15 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/services"
+                  to="/career"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
-                  CAREEAR
+                  CAREER
                 </NavLink>
               </li>
               <li>
@@ -110,8 +139,8 @@ const Navbar = () => {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
-                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
                 >
@@ -146,8 +175,8 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
                 }
                 onClick={closeMobileMenu}
               >
@@ -159,8 +188,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
                 }
                 onClick={closeMobileMenu}
               >
@@ -169,11 +198,24 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/integrated-solutions"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                }
+                onClick={closeMobileMenu}
+              >
+                Integrated Solutions
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/services"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
                 }
                 onClick={closeMobileMenu}
               >
@@ -182,11 +224,37 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/project"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                }
+                onClick={closeMobileMenu}
+              >
+                Project
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/career"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                }
+                onClick={closeMobileMenu}
+              >
+                Career
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
-                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
                 }
                 onClick={closeMobileMenu}
               >

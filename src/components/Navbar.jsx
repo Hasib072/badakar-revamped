@@ -1,10 +1,18 @@
 // src/components/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/BadakarLogoFull.png';
+import AOS from 'aos';
+
 
 const Navbar = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleToggle = () => {

@@ -155,7 +155,7 @@ const Navbar = () => {
             <button
               onClick={handleToggle}
               type="button"
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white bg-[#022c4b]"
+              className="text-gray-300 hover:text-white focus:outline-none hover:outline-yellow hover:border-yellow-500 focus:text-white bg-transparent"
               aria-label="Toggle menu"
               aria-expanded={isMobile}
               aria-controls="mobile-menu"

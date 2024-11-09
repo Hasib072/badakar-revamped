@@ -56,7 +56,7 @@ const Home = () => {
             Innovative Designs for Modern Living
           </h1>
           <h2 className="mt-4 text-1xl md:text-2xl text-white drop-shadow-lg font-semibold">
-          A comprehensive range of modern designs and furnishing<br/>are available which outcompetes the peers globally. 
+          A comprehensive range of modern designs and furnishing are available which outcompetes the peers globally.
           </h2>
           {/* Call-to-Action Button */}
           <div className='mt-[20px]'>
@@ -66,7 +66,7 @@ const Home = () => {
             <a href='https://x.com/i/flow/login?redirect_after_login=%2FBadakarInterio1' className='text-white hover:text-gray-800' target = "_blank" rel = "noopener noreferrer">
               <FaXTwitter className='inline mr-2 text-[1.5rem]' />
             </a>
-            <a href='https://www.instagram.com/badakarinteriors/' className='text-white hover:text-[#fd6431]' target = "_blank" rel = "noopener noreferrer">
+            <a href='https://www.instagram.com/badakarinteriors/' className='text-white hover:text-[#fc2d75]' target = "_blank" rel = "noopener noreferrer">
               <RiInstagramFill className='inline mr-2 text-[1.5rem]' />
             </a>
             <a href='https://www.linkedin.com/company/badakar/' className='text-white hover:text-[#0882bd]' target = "_blank" rel = "noopener noreferrer">
@@ -79,7 +79,7 @@ const Home = () => {
           <div className="inline mr-5">
             <a
               href="https://drive.google.com/file/d/1jnAoG139EZbv-depo5SgV7gcCMIk8zkN/view"
-              className="inline-block px-6 py-3 border-solid border-yellow-500 border-2 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300" target = "_blank" rel = "noopener noreferrer"
+              className="inline-block px-2 md:px-6 py-3 border-solid border-yellow-500 border-2 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300" target = "_blank" rel = "noopener noreferrer"
             >VIEW BROSCHER
             </a>
             
@@ -87,7 +87,7 @@ const Home = () => {
           <div className="inline">
             <a
               href="/contact"
-              className="inline-block px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300"
+              className="inline-block px-2 md:px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300"
             >
               GET IN TOUCH
             </a>

@@ -7,7 +7,7 @@ import logo from '../assets/BadakarLogoFull.png'; // Adjust the path as necessar
 
 const Footer = () => {
   return (
-    <footer className="bg-[#022c4b] text-white px-20 mt-[100px]">
+    <footer className="bg-[#022c4b] text-white md:px-20 mt-[100px]">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-wrap">
           {/* Column 1: Logo and Description */}

@@ -36,7 +36,7 @@ const Navbar = () => {
         } else {
           setShowNavbar(true);
         }
-      }, 50); 
+      }, 10); 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -49,9 +49,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-10 top-0 transition-opacity duration-500 ease-in-out ${
+      className={`fixed w-full z-[1000] top-0 transition-opacity duration-500 ease-in-out ${
         showNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      } bg-transparent`}
+      } ${isMobile ? 'bg-[#022c4b]' : 'bg-transparent'} md:bg-transparent`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -155,7 +155,7 @@ const Navbar = () => {
             <button
               onClick={handleToggle}
               type="button"
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white bg-[#022c4b]"
               aria-label="Toggle menu"
               aria-expanded={isMobile}
               aria-controls="mobile-menu"
@@ -168,8 +168,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobile && (
-        <div id="mobile-menu" className="md:hidden bg-gray-800 transition duration-300 ease-in-out">
-          <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div id="mobile-menu" className="relative md:hidden bg-[#022c4b] h-[100hv] transition duration-300 ease-in-out text-center z-[1000]">
+          <ul className="px-12 pt-2 pb-3 space-y-1 sm:px-20 z-[1000]">
             <li>
               <NavLink
                 to="/"
@@ -253,8 +253,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
-                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold'
+                    ? 'block text-yellow-500 px-3 py-2 rounded-md text-base font-bold'
+                    : 'block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-bold border-solid border-yellow-500 border-2'
                 }
                 onClick={closeMobileMenu}
               >
@@ -262,6 +262,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
+          <div className='w-screen h-screen bg-[#022c4b] z-0'></div>
         </div>
       )}
     </nav>

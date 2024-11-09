@@ -89,7 +89,7 @@ const Clients = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 mt-[100px]">
+    <div className="container mx-auto px-4 pt-12 mt-[100px]">
       {/* Section Header */}
         
       <div className="flex flex-wrap mb-8">
@@ -130,7 +130,7 @@ const Clients = () => {
             role="button"
             aria-label="Read more about Badakar"
           >
-            <span>KNOW MORE</span>
+            <span>VIEW MORE</span>
           </a>
           </div>
         </div>

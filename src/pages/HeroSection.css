@@ -1,11 +1,12 @@
 /* src/pages/HeroSection.css */
 
 .hero-overlay {
-    clip-path: polygon(0 0, 25% 0, 10% 100%, 0% 100%);
+    clip-path: polygon(0 0, 63% 0, 48% 100%, 0% 100%);
+    
   }
   
   .hero-overlay.hovered {
-    clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
+    clip-path: polygon(0 0, 25% 0, 10% 100%, 0% 100%);
   }
   
   @media (prefers-reduced-motion: reduce) {

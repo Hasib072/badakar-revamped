@@ -65,11 +65,8 @@ const ExpertiseSection = () => {
     <section className="container mx-auto my-16 px-4 max-w-7xl mt-[100px]">
       {/* Title Section */}
       <div className="text-center mb-12">
-        <span className="flex justify-center items-center font-light tracking-wider mb-4">
-          <span>OUR EXPERTISE</span>
-        </span>
         <h3
-          data-aos="zoom-in"
+          data-aos="fade-in"
           className="text-3xl md:text-4xl font-bold font-inter mb-4"
         >
           <p>PASSION INTO INTERIOR SERVICES.</p>

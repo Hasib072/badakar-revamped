@@ -71,7 +71,7 @@ const Testimonials = () => {
 
       {/* Testimonials Grid */}
       <div 
-        data-aos="slide-up"
+        data-aos="fade-in"
         className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {testimonials.map((testimonial, index) => (
           <div

@@ -13,7 +13,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container mx-auto my-10 px-[120px]">
+    <div className="container mx-auto my-10 px-[40px] md:px-[120px]">
       <div className="flex flex-wrap justify-center">
         {/* Rotated BADAKAR Text */}
         <div data-aos="slide-up" className="relative left-10 hidden lg:block rotate-90">
@@ -40,7 +40,7 @@ const AboutSection = () => {
           {/* Heading */}
           <h1
             data-aos="fade-in"
-            className="text-[1.8rem] font-bold mt-20 mb-4 font-anton"
+            className=" text-[1.2rem] md:text-[1.8rem] font-bold mt-20 mb-4 font-anton"
           >
             <p>
               BADAKAR, TRANSFORMING YOUR DREAMS AND IMAGINATION <br/>INTO REALITY.

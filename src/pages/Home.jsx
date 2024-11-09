@@ -3,6 +3,10 @@ import React from 'react';
 import backgroundImage from '../assets/badakarhero1.png'; // Finished Image
 import overlayImage from '../assets/badakarhero2.png'; // Unfinished Image
 import './HeroSection.css'; // Import the CSS file
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -42,6 +46,12 @@ const Home = () => {
           A comprehensive range of modern designs and furnishing<br/>are available which outcompetes the peers globally. 
           </h2>
           {/* Call-to-Action Button */}
+          <div className='mt-[20px]'>
+          <FaFacebook className='inline mr-2 text-[1.5rem]' />
+          <FaXTwitter className='inline mr-2 text-[1.5rem]' />
+          <RiInstagramFill className='inline mr-2 text-[1.5rem]' />
+          <FaLinkedin className='inline mr-2 text-[1.5rem]' />
+          </div>
           <div className="mt-8">
             <a
               href="/contact"

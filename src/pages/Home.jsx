@@ -9,6 +9,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
 import AboutSection from '../components/AboutSection';
 import ExpertiseSection from '../components/ExpertiseSection';
+import Testimonials from '../components/Testimonials';
 import AOS from 'aos';
 
 
@@ -77,7 +78,7 @@ const Home = () => {
           <div className="inline mr-5">
             <a
               href="https://drive.google.com/file/d/1jnAoG139EZbv-depo5SgV7gcCMIk8zkN/view"
-              className="inline-block px-6 py-3 border-solid border-yellow-500 border-2 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300"
+              className="inline-block px-6 py-3 border-solid border-yellow-500 border-2 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300" target = "_blank" rel = "noopener noreferrer"
             >VIEW BROSCHER
             </a>
             
@@ -97,6 +98,7 @@ const Home = () => {
     </div>
     <AboutSection/>
     <ExpertiseSection/>
+    <Testimonials/>
     </>
   );
 };

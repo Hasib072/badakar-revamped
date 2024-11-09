@@ -50,6 +50,10 @@ const ExpertiseSection = () => {
       title: 'Fire Protection',
       image: fireProtection,
     },
+    {
+      title: 'Let`s Talk',
+      image: fireProtection,
+    },
   ];
 
   return (
@@ -63,8 +67,7 @@ const ExpertiseSection = () => {
           data-aos="zoom-in"
           className="text-3xl md:text-4xl font-bold font-inter mb-4"
         >
-          <p>PASSION INTO</p>
-          <p>INTERIOR SERVICES.</p>
+          <p>PASSION INTO INTERIOR SERVICES.</p>
         </h3>
         <p className="mt-4 font-inter text-lg text-gray-700">
           The elegance meets efficiency in professional projects, transforming your spaces with our expertise.

@@ -140,7 +140,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
-                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold border-solid border-yellow-500 border-4'
                   }
                   onClick={closeMobileMenu}
                 >

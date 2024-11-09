@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/BadakarLogoFull.png';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,13 +16,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white fixed w-full z-10 top-0">
+    <nav className="fixed w-full z-10 top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-black text-xl font-bold" onClick={closeMobileMenu}>
-              MyLogo
+            <NavLink to="/" className="text-white text-xl font-bold" onClick={closeMobileMenu}>
+              <img 
+              className='h-16'
+              src={logo}
+              alt="Badakar Logo" />
             </NavLink>
           </div>
 
@@ -33,8 +37,8 @@ const Navbar = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -46,8 +50,8 @@ const Navbar = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -59,8 +63,8 @@ const Navbar = () => {
                   to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -72,8 +76,8 @@ const Navbar = () => {
                   to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -85,8 +89,8 @@ const Navbar = () => {
                   to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -98,8 +102,8 @@ const Navbar = () => {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-black hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                      ? "text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
+                      : "text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold"
                   }
                   onClick={closeMobileMenu}
                 >
@@ -114,7 +118,7 @@ const Navbar = () => {
             <button
               onClick={handleToggle}
               type="button"
-              className="text-gray-300 hover:text-black focus:outline-none focus:text-black"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
               aria-label="Toggle menu"
               aria-expanded={isMobile}
               aria-controls="mobile-menu"
@@ -134,8 +138,8 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
                 }
                 onClick={closeMobileMenu}
               >
@@ -147,8 +151,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
                 }
                 onClick={closeMobileMenu}
               >
@@ -160,8 +164,8 @@ const Navbar = () => {
                 to="/services"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
                 }
                 onClick={closeMobileMenu}
               >
@@ -173,8 +177,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
-                    : "block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium"
+                    ? "block text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
+                    : "block text-white hover:text-yellow-500 px-3 py-2 rounded-md text-base font-semibold"
                 }
                 onClick={closeMobileMenu}
               >

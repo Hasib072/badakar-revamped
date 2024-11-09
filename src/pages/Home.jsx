@@ -13,12 +13,12 @@ const Home = () => {
 
   return (
     <div
-      className="relative flex items-center justify-center bg-gray-100 top-[4rem]"
+      className="relative flex items-center justify-center bg-gray-100"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ 
-        height: '570px',
-        maxHeight: '570px' 
+        height: '620px',
+        maxHeight: '620px' 
       }} 
     >
       {/* Background Image */}
@@ -47,10 +47,18 @@ const Home = () => {
           </h2>
           {/* Call-to-Action Button */}
           <div className='mt-[20px]'>
-          <FaFacebook className='inline mr-2 text-[1.5rem]' />
-          <FaXTwitter className='inline mr-2 text-[1.5rem]' />
-          <RiInstagramFill className='inline mr-2 text-[1.5rem]' />
-          <FaLinkedin className='inline mr-2 text-[1.5rem]' />
+            <a href='https://www.facebook.com/badakarindia' className='text-white hover:text-blue-400' target = "_blank" rel = "noopener noreferrer">
+              <FaFacebook className='inline mr-2 text-[1.5rem]' />
+            </a>
+            <a href='https://x.com/i/flow/login?redirect_after_login=%2FBadakarInterio1' className='text-white hover:text-gray-800' target = "_blank" rel = "noopener noreferrer">
+              <FaXTwitter className='inline mr-2 text-[1.5rem]' />
+            </a>
+            <a href='https://www.instagram.com/badakarinteriors/' className='text-white hover:text-[#fd6431]' target = "_blank" rel = "noopener noreferrer">
+              <RiInstagramFill className='inline mr-2 text-[1.5rem]' />
+            </a>
+            <a href='https://www.linkedin.com/company/badakar/' className='text-white hover:text-[#0882bd]' target = "_blank" rel = "noopener noreferrer">
+              <FaLinkedin className='inline mr-2 text-[1.5rem]' />
+            </a>
           </div>
           <div className="mt-8">
             <a

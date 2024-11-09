@@ -10,6 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import AboutSection from '../components/AboutSection';
 import ExpertiseSection from '../components/ExpertiseSection';
 import Testimonials from '../components/Testimonials';
+import Clients from '../components/Clients';
 import AOS from 'aos';
 
 
@@ -99,6 +100,7 @@ const Home = () => {
     <AboutSection/>
     <ExpertiseSection/>
     <Testimonials/>
+    <Clients/>
     </>
   );
 };

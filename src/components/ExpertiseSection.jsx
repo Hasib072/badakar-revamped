@@ -92,7 +92,7 @@ const ExpertiseSection = () => {
               <img
                 src={expertise.image}
                 alt={expertise.title}
-                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110 filter grayscale group-hover:grayscale-0 transition-filter duration-300 ease-in-out"
+                className="w-full h-full object-cover transform transition-transform group-hover:scale-110 filter grayscale group-hover:grayscale-0 transition-filter duration-300 ease-in-out"
               />
             </div>
 

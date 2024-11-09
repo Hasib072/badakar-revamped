@@ -1,6 +1,6 @@
 // src/components/ExpertiseSection.jsx
 import React, { useEffect } from 'react';
-import interiorFitouts from '../assets/interior-fitouts.jpg'; // Replace with your actual image paths
+import interiorFitouts from '../assets/interior-fitouts.jpg';
 import securitySurveillance from '../assets/security-surveillance.jpg';
 import mepServices from '../assets/mep-services.jpg';
 import commercialCeilings from '../assets/commercial-ceilings.jpg';
@@ -19,24 +19,32 @@ const ExpertiseSection = () => {
 
   const expertiseData = [
     {
-      title: 'Interior Fitouts',
+      title: 'Fresh Commercial & Residential Interiors',
       image: interiorFitouts,
+    },
+    {
+      title: 'Renovation / Restructure / Remodelling',
+      image: securitySurveillance,
+    },
+    {
+      title: 'Electronics / Electricals',
+      image: mepServices,
+    },
+    {
+      title: 'Interior Fitouts',
+      image: commercialCeilings,
+    },
+    {
+      title: 'Complete MEP Services',
+      image: homeAutomation,
+    },
+    {
+      title: 'Home Automation',
+      image: fireProtection,
     },
     {
       title: 'Security Surveillance',
       image: securitySurveillance,
-    },
-    {
-      title: 'MEP Services',
-      image: mepServices,
-    },
-    {
-      title: 'Commercial Ceilings',
-      image: commercialCeilings,
-    },
-    {
-      title: 'Home Automation',
-      image: homeAutomation,
     },
     {
       title: 'Fire Protection',
@@ -45,60 +53,53 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="container mx-auto my-10 px-4">
-      <div className="flex flex-wrap justify-center items-start">
-        {/* Expertise Textual Content */}
-        <div className="w-full lg:w-4/12 p-4">
-          <span className="flex items-center font-light tracking-wider">
-            {/* SVG Dash Icon */}
-            <span>OUR EXPERTISE</span>
-          </span>
-          <h3
-            data-aos="zoom-in"
-            className="text-2xl md:text-3xl font-bold mt-5 font-inter text-left"
-          >
-            <strong>PASSION INTO</strong>
-            <br />
-            <strong>INTERIOR SERVICES.</strong>
-          </h3>
-          <p className="mt-5 font-inter text-base text-justify">
-            The elegance meets efficiency in professional projects.
-            <br /><br />
-            • Fresh Commercial &amp; Residential Interiors.<br />
-            • Renovation / Restructure / Remodelling.<br />
-            • Electronics / Electricals.<br />
-            • Interior Fitouts.<br />
-            • Complete MEP Services.<br />
-            • Home Automation.<br />
-            • Security Surveillance.<br />
-            • Fire Protection.<br />
-          </p>
-        </div>
+    <section className="container mx-auto my-16 px-4 max-w-7xl">
+      {/* Title Section */}
+      <div className="text-center mb-12">
+        <span className="flex justify-center items-center font-light tracking-wider mb-4">
+          <span>OUR EXPERTISE</span>
+        </span>
+        <h3
+          data-aos="zoom-in"
+          className="text-3xl md:text-4xl font-bold font-inter mb-4"
+        >
+          <strong>PASSION INTO</strong>
+          <br />
+          <strong>INTERIOR SERVICES.</strong>
+        </h3>
+        <p className="mt-4 font-inter text-lg text-gray-700">
+          The elegance meets efficiency in professional projects, transforming your spaces with our expertise.
+        </p>
+      </div>
 
-        {/* Expertise Images Grid */}
-        <div className="w-full lg:w-8/12 p-4">
-          <div className="flex flex-wrap -mx-2">
-            {expertiseData.map((expertise, index) => (
-              <div key={index} className="w-full sm:w-1/2 md:w-1/3 p-2">
-                <div
-                  className="bg-gray-100 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300"
-                  data-aos="fade-up"
-                >
-                  <img
-                    src={expertise.image}
-                    alt={expertise.title}
-                    className="w-full h-40 object-cover"
-                  />
-                  <div className="p-4">
-                    <h4 className="text-lg font-inter font-semibold text-gray-800">
-                      {expertise.title}
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* Expertise Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {expertiseData.map((expertise, index) => (
+          <div
+            key={index}
+            className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+            data-aos="fade-up"
+          >
+            {/* Expertise Image with 4:3 Aspect Ratio */}
+            <div className="aspect-w-4 aspect-h-3">
+              <img
+                src={expertise.image}
+                alt={expertise.title}
+                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-25"></div>
+
+            {/* Expertise Title */}
+            <div className="absolute bottom-0 left-0 w-full text-center px-4 py-2">
+              <h4 className="text-white text-lg font-inter font-semibold transition-opacity duration-300 group-hover:opacity-90">
+                {expertise.title}
+              </h4>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

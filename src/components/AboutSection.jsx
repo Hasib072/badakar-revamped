@@ -1,6 +1,7 @@
 // src/components/AboutSection.jsx
 import React, { useEffect } from 'react';
 import mainBanner from '../assets/main-banner1.png'; // Ensure the path is correct
+import { NavLink } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -55,15 +56,15 @@ const AboutSection = () => {
           </p>
 
           {/* Read More Button */}
-          <a
-            href="/about"
+          <NavLink
+            to="/about"
             className="btn btn-dark btn-sm active font-light float-right mt-5 flex items-center space-x-2"
             style={{ borderRadius: '0px', letterSpacing: '2px'}}
             role="button"
             aria-label="Read more about Badakar"
           >
             <span>KNOW MORE</span>
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

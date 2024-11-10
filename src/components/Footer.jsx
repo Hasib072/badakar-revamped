@@ -107,7 +107,7 @@ const Footer = () => {
             </ul>
             <h4 className="text-lg font-semibold mt-6 mb-4 text-gray-300 " >Address</h4>
             <p className="text-sm text-gray-300">
-              42/1, 9th D Main Rd, RPC Layout, Vijay Nagar, Myysore Rd, Bengaluru, Karnataka 560104.
+            #1500, 2nd Floor, S End B Cross Rd, Jayanagara 9th Block, Bengaluru, Karnataka 560069.
             </p>
           </div>
         </div>

@@ -74,7 +74,7 @@ const Navbar = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
@@ -87,7 +87,7 @@ const Navbar = () => {
                   to="/integrated-solutions"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
@@ -100,7 +100,7 @@ const Navbar = () => {
                   to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
@@ -113,7 +113,7 @@ const Navbar = () => {
                   to="/project"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
@@ -126,7 +126,7 @@ const Navbar = () => {
                   to="/career"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
                   }
                   onClick={closeMobileMenu}
@@ -139,7 +139,7 @@ const Navbar = () => {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'
+                      ? 'text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold border-solid hover:text-yellow-500 border-yellow-500 border-4'
                       : 'text-white hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold border-solid border-yellow-500 border-4'
                   }
                   onClick={closeMobileMenu}

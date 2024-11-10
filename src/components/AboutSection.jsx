@@ -56,7 +56,7 @@ const AboutSection = () => {
 
           {/* Read More Button */}
           <a
-            href="/About-us.html"
+            href="/about"
             className="btn btn-dark btn-sm active font-light float-right mt-5 flex items-center space-x-2"
             style={{ borderRadius: '0px', letterSpacing: '2px'}}
             role="button"

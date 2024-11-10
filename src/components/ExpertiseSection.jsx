@@ -24,15 +24,15 @@ const ExpertiseSection = () => {
 
   const expertiseData = [
     {
-      title: 'Fresh Commercial & Residential Interiors',
+      title: 'Interiors Designs',
       image: img01,
     },
     {
-      title: 'Renovation / Restructure / Remodelling',
+      title: 'Remodelling',
       image: renovation,
     },
     {
-      title: 'Electronics / Electricals',
+      title: 'Electricals',
       image: electrical,
     },
     {

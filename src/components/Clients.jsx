@@ -125,7 +125,7 @@ const Clients = () => {
           <div className="flex justify-center mt-8">
             {/* Read More Button */}
           <Link
-            to="/our-clients"
+            to="/#"
             className="btn btn-dark btn-sm active font-light float-right mt-5 flex items-center space-x-2"
             style={{ borderRadius: '0px', letterSpacing: '2px'}}
             role="button"

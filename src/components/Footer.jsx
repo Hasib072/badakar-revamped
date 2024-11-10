@@ -4,6 +4,7 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import logo from '../assets/BadakarLogoFull.png'; // Adjust the path as necessary
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -39,22 +40,22 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-gray-300">Know More</h4>
             <ul>
               <li className="mb-2">
-                <a href="/about" className="text-white hover:text-gray-100 text-sm">About Us</a>
+                <Link to="/about" className="text-white hover:text-gray-100 text-sm">About Us</Link>
               </li>
               <li className="mb-2">
-                <a href="/integrated-solutions" className="text-white hover:text-gray-100 text-sm">Integrated Solutions</a>
+                <Link to="/integrated-solutions" className="text-white hover:text-gray-100 text-sm">Integrated Solutions</Link>
               </li>
               <li className="mb-2">
-                <a href="/services" className="text-white hover:text-gray-100 text-sm">Services</a>
+                <Link to="/services" className="text-white hover:text-gray-100 text-sm">Services</Link>
               </li>
               <li className="mb-2">
-                <a href="/project" className="text-white hover:text-gray-100 text-sm">Project</a>
+                <Link to="/project" className="text-white hover:text-gray-100 text-sm">Project</Link>
               </li>
               <li className="mb-2">
-                <a href="/Careers.html" className="text-white hover:text-gray-100 text-sm">Career</a>
+                <Link to="/career" className="text-white hover:text-gray-100 text-sm">Career</Link>
               </li>
               <li>
-                <a href="/Contact.html" className=" text-white hover:text-gray-100 text-sm">Contact Us</a>
+                <Link to="/contact" className=" text-white hover:text-gray-100 text-sm">Contact Us</Link>
               </li>
             </ul>
           </div>

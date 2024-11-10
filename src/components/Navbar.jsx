@@ -84,7 +84,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/integrated-solutions"
+                  to="/integratedsolutions"
                   className={({ isActive }) =>
                     isActive
                       ? 'text-yellow-500 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-semibold'

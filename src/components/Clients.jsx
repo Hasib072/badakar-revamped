@@ -2,6 +2,7 @@
 import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Clients = () => {
   // Initialize AOS
@@ -123,15 +124,15 @@ const Clients = () => {
           {/* Call-to-Action Button */}
           <div className="flex justify-center mt-8">
             {/* Read More Button */}
-          <a
-            href="/our-clients"
+          <Link
+            to="/our-clients"
             className="btn btn-dark btn-sm active font-light float-right mt-5 flex items-center space-x-2"
             style={{ borderRadius: '0px', letterSpacing: '2px'}}
             role="button"
             aria-label="Read more about Badakar"
           >
             <span>VIEW MORE</span>
-          </a>
+          </Link>
           </div>
         </div>
       </div>

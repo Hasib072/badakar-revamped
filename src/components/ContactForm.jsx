@@ -41,7 +41,7 @@ const ContactForm = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Contact Form Section */}
-      <section className="bg-white shadow-md rounded-md p-8">
+      <section className="bg-white shadow-md rounded-md p-8 mt-10 mb-10">
         <div className="flex flex-col lg:flex-row">
           {/* Left Column: Informational Text */}
           <div className="lg:w-2/5 mb-8 lg:mb-0 lg:pr-8">
@@ -191,23 +191,24 @@ const ContactForm = () => {
       </section>
 
       {/* Location Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="py-16 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row">
             {/* Left Column: Map */}
-            <div className="lg:w-1/4 mb-8 lg:mb-0 lg:pr-8">
-              <h2 className="text-3xl font-bold mb-6">Find Us At</h2>
+            <div className="lg:w-3/5 mb-8 lg:mb-0 lg:pr-8">
+              
               <a
                 href="https://www.google.com/maps/place/Your+Address+Here"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.2172045246493!2d77.5943626!3d12.9161518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150ed298ca15%3A0x5f9a7f243baba915!2sS%20End%20B%20Cross%20Rd%2C%20J.%20P.%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560078!5e0!3m2!1sen!2sin!4v1731237186781!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                 <iframe
                   title="Company Location"
-                  src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d972.2172045246493!2d77.5943626!3d12.9161518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150ed298ca15%3A0x5f9a7f243baba915!2sS%20End%20B%20Cross%20Rd%2C%20J.%20P.%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560078!5e0!3m2!1sen!2sin!4v1731237186781!5m2!1sen!2sin"
                   width="100%"
-                  height="250"
+                  height="400"
                   allowFullScreen=""
                   loading="lazy"
                   className="rounded-md shadow-md"
@@ -216,11 +217,12 @@ const ContactForm = () => {
             </div>
 
             {/* Right Column: Contact Details */}
-            <div className="lg:w-3/4">
-              <h3 className="text-xl font-semibold mb-4 uppercase text-gray-800">Contact</h3>
+            <div className="lg:w-2/5 pl-9">
+              <h2 className="text-3xl font-bold mb-6">Find Us At</h2>
+              <h3 className="text-xl  md:mt-32 font-semibold mb-4 uppercase text-gray-800">Contact</h3>
               <div className="flex items-center mb-4">
                 <FaPhoneAlt className="text-indigo-600 mr-3" />
-                <span className="text-gray-700">+1 (123) 456-7890</span>
+                <span className="text-gray-700">+91 95909 53537</span>
               </div>
               <div className="flex items-center mb-4">
                 <FaEnvelope className="text-indigo-600 mr-3" />
@@ -229,8 +231,7 @@ const ContactForm = () => {
               <div className="flex items-center">
                 <FiMapPin className="text-indigo-600 mr-3" />
                 <span className="text-gray-700">
-                  1234 Design Street, Suite 100,<br />
-                  City, State, ZIP Code
+                #1500, 2nd Floor, S End B Cross Rd, Jayanagara 9th Block, Bengaluru, Karnataka 560069.
                 </span>
               </div>
             </div>
@@ -242,8 +243,8 @@ const ContactForm = () => {
       {submitted && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-8 max-w-md mx-auto text-center">
-            <h2 className="text-2xl font-semibold text-green-600 mb-4">
-              Thank you for your message!
+            <h2 className="text-2xl font-semibold text-blue-600 mb-4">
+              Thank you for cantacting us!
             </h2>
             <p className="text-gray-700 mb-6">
               We'll get back to you shortly.

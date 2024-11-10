@@ -12,6 +12,7 @@ import ExpertiseSection from '../components/ExpertiseSection';
 import Testimonials from '../components/Testimonials';
 import Clients from '../components/Clients';
 import AOS from 'aos';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -85,12 +86,12 @@ const Home = () => {
             
           </div>
           <div className="inline">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block px-2 md:px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300"
             >
               GET IN TOUCH
-            </a>
+            </Link>
           </div>
           </div>
         </div>

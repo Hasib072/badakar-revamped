@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import IntegratedSolutions from './pages/integratedSolutions';
+import PageUnderConstruction from './pages/PageUnderConstruction';
+
 import './index.css';
 
 function App() {
@@ -18,8 +21,12 @@ function App() {
           <Routes> {/* Routes correctly imported */}
             <Route path="/" element={<Home />} /> {/* Home Page */}
             <Route path="/about" element={<About />} /> {/* About Page */}
-            <Route path="/services" element={<Services />} /> {/* Services Page */}
+            <Route path="/services" element={<PageUnderConstruction />} /> {/* Services Page */}
             <Route path="/contact" element={<Contact />} /> {/* Contact Page */}
+            <Route path="/integratedsolutions" element={<PageUnderConstruction />} /> {/* IntegratedSolutions Page */}
+            <Route path="/project" element={<PageUnderConstruction />} /> {/* IntegratedSolutions Page */}
+            <Route path="/career" element={<PageUnderConstruction />} /> {/* IntegratedSolutions Page */}
+            
           </Routes>
         </div>
         <Footer />

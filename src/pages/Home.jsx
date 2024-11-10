@@ -81,7 +81,7 @@ const Home = () => {
             <a
               href="https://drive.google.com/file/d/1jnAoG139EZbv-depo5SgV7gcCMIk8zkN/view"
               className="inline-block px-2 md:px-6 py-3 border-solid border-yellow-500 border-2 text-white font-semibold rounded-md shadow hover:bg-yellow-600/50 hover:text-white transition duration-300" target = "_blank" rel = "noopener noreferrer"
-            >VIEW BROSCHER
+            >VIEW BROCHURE
             </a>
             
           </div>

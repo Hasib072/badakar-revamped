@@ -13,6 +13,7 @@ A revamped version of the Badakar website for an interior designer, built with V
 
 - **Vite**: Fast frontend build tool
 - **React**: JavaScript library for building user interfaces
+- **Netlify-Forms**: Netlify Provided easy to use form submition feature.
 
 ## TODO
 
